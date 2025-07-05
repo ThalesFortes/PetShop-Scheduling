@@ -1,0 +1,45 @@
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box ;
+  font-family: "Inter", "sans-serif";
+}
+
+:root{
+  /* Texts variables */
+  --ff-base: "Inter", "sans-serif";
+  --ff-title: "Inter Tight", sans-serif;
+
+  --text-title: 700 1.5rem/2rem var(--ff-title);
+
+  --text-md: 500 0.9rem/1.5rem var(--ff-base);
+  --text-sm: 500 0.75rem/1rem var(--ff-base);
+  --text-lb-xl: 700 1rem/2rem var(--ff-base);
+  --text-lb-md: 700 0.9rem/2rem var(--ff-base);
+  --text-lb-sm: 700 0.75rem/1rem var(--ff-base);
+  --text-link: 500 0.75rem/1rem var(--ff-base);
+
+  /* Colors variables */
+  --content-primary: #FFFFFF;
+  --content-secondary: #98959D;
+  --content-tertiary: #666666;
+  --content-brand: #9282FA;
+
+  --background-primary: #151515;
+  --background-secondary: #1E1E1E;
+  --background-tertiary: #23242C;
+  --background-brand: #9282FA;
+  --background-highlights: #BDB4FA;
+
+  --border-primary: #3E3C41;
+  --border-secondary: #86818C;
+  --border-tertiary: #9282FA;
+  --border-divisor: #353339;
+
+  --accente-blue: #027DF0;
+  --accente-blue-light: #16487A;
+  --accente-yellow: #F0DC02;
+  --accente-yellow-light: #756E1B;
+  --accente-orange: #F09102;
+  --accente-orange-light: #75501B;
+}
