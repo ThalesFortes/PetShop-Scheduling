@@ -4,7 +4,7 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box ;
-  font-family: "Inter", "sans-serif";
+  font-family: "Inter", sans-serif;
 }
 
 :root{
@@ -47,5 +47,7 @@
 }
 
 body{
-  background: #14151d;
+  background-color: #14151d;
+  color: var(--content-primary);
+  font: var(--text-md);
 }

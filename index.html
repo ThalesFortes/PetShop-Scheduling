@@ -17,7 +17,7 @@
 </head>
 <body>
   <div id="app">
-    <header>
+    <header id="logo">
       <img src="./src/assets/logo.png" alt="logo">
     </header>
     <main>
@@ -26,11 +26,15 @@
           <h1>Sua agenda</h1>
           <p>Aqui você pode ver todos os clientes e serviços agendados para hoje.</p>
         </header>
-        <input type="date"
-               id="date"
-               name="date"
-               for="petshop-form"
-               required>
+        <div class="date-picker-wrapper">
+          <i><img src="./src/assets/calendar.svg" alt=""></i>
+          <input type="date"
+                id="date"
+                name="date"
+                for="petshop-form"
+                aria-label="Selecione uma data"
+                required>
+        </div>
       </section>
     </main>
   </div>

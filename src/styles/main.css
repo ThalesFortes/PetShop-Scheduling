@@ -1,0 +1,30 @@
+main {
+  max-width: 711px;
+  margin: auto;
+}
+
+#form-header{
+  display: flex;
+  gap: 5rem;
+
+  & h1 {
+    margin-bottom: 10px;
+    font: var(--text-title)
+  }
+
+  & p {
+    color: var(--content-secondary);
+  }
+
+  & .date-picker-wrapper{
+    
+
+    & #date{
+      background: transparent;
+      color: #FFF;
+      border: none;
+
+    }
+
+  }
+}
