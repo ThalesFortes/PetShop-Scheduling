@@ -14,7 +14,7 @@
 
   --text-title: 700 1.5rem/2rem var(--ff-title);
 
-  --text-md: 500 0.9rem/1.5rem var(--ff-base);
+  --text-md: 500 1rem/1.5rem var(--ff-base);
   --text-sm: 500 0.75rem/1rem var(--ff-base);
   --text-lb-xl: 700 1rem/2rem var(--ff-base);
   --text-lb-md: 700 0.9rem/2rem var(--ff-base);
@@ -46,7 +46,7 @@
   --accent-orange-light: #75501B;
 }
 
-body{
+body, input{
   background-color: #14151d;
   color: var(--content-primary);
   font: var(--text-md);
