@@ -1,4 +1,6 @@
-*{
+*,
+*::before,
+*::after{
   padding: 0;
   margin: 0;
   box-sizing: border-box ;
@@ -7,7 +9,7 @@
 
 :root{
   /* Texts variables */
-  --ff-base: "Inter", "sans-serif";
+  --ff-base: "Inter", sans-serif;
   --ff-title: "Inter Tight", sans-serif;
 
   --text-title: 700 1.5rem/2rem var(--ff-title);
@@ -36,10 +38,14 @@
   --border-tertiary: #9282FA;
   --border-divisor: #353339;
 
-  --accente-blue: #027DF0;
-  --accente-blue-light: #16487A;
-  --accente-yellow: #F0DC02;
-  --accente-yellow-light: #756E1B;
-  --accente-orange: #F09102;
-  --accente-orange-light: #75501B;
+  --accent-blue: #027DF0;
+  --accent-blue-light: #16487A;
+  --accent-yellow: #F0DC02;
+  --accent-yellow-light: #756E1B;
+  --accent-orange: #F09102;
+  --accent-orange-light: #75501B;
+}
+
+body{
+  background: #14151d;
 }
