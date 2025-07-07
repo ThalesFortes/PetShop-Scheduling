@@ -51,7 +51,7 @@ main {
 }
 
 
-@media only screen and (min-width:1100px) {
+@media only screen and (min-width:1020px) {
   #form-header{
     flex-direction: row;
     gap: 3rem;
