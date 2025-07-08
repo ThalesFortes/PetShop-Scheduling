@@ -1,0 +1,39 @@
+.schedule-list{
+  margin-top: 2rem;
+  margin-bottom: 4rem;
+  background-color: var(--background-tertiary);
+  padding: 1.5rem;
+  border-radius: 20px;
+
+  & header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid var(--border-divisor);
+    padding: 0.5rem;
+    font: var(--text-lb-xl);
+
+    & div{
+      display: flex;
+      gap: 12px;
+      align-items: center;
+    }
+
+    & span{
+      color: var(--content-secondary);
+    }
+  }
+
+  & .list{
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+
+    & li {
+      border-bottom: 1px solid var(--border-divisor);
+      padding: 1.4rem;
+    }
+  }
+}
+

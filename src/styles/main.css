@@ -26,8 +26,8 @@ main {
     justify-content: space-between;
     padding-inline: 0.75rem;
     height: 50px;
-    width: 200px;
-   
+    width: 220px;
+
     &:hover{
       border: 1px solid var(--border-secondary);
     }
@@ -44,7 +44,7 @@ main {
       background: transparent;
       color: var(--content-secondary);
       border: none;
-       outline: unset;
+      outline: unset;
     }
 
   }
