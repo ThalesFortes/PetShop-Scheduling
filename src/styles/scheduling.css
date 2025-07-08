@@ -71,3 +71,22 @@
     }
   }
 }
+
+
+@media only screen and (min-width:1020px) {
+  .schedules{
+    .schedule-list{
+      & .description-scheduling {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        padding: 1.5rem;
+
+        & > button{
+          margin-top: 0rem;
+          margin-left: 0;
+        }
+      }
+    }
+  }
+}

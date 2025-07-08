@@ -16,6 +16,7 @@ main {
 
   & p {
     color: var(--content-secondary);
+    margin-right: 3.5rem;
   }
 
   & .date-picker-wrapper{
@@ -26,8 +27,8 @@ main {
     justify-content: space-between;
     padding-inline: 0.75rem;
     height: 50px;
-    width: 220px;
-
+    width: 210px;
+    
     &:hover{
       border: 1px solid var(--border-secondary);
     }
