@@ -2,6 +2,7 @@ main {
   max-width: 890px;
   margin: auto;
   padding-inline: 1.3rem;
+  position: relative;
 }
 
 #form-header{
