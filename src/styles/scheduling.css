@@ -1,8 +1,11 @@
 .schedules{
-    
+   display: flex;
+   flex-direction: column;
+   gap: 0.8rem;
+   margin-top: 2rem;
+   margin-bottom: 4rem;
+
   .schedule-list{
-    margin-top: 2rem;
-    margin-bottom: 4rem;
     background-color: var(--background-tertiary);
     padding: 1.5rem;
     border-radius: 20px;
