@@ -18,3 +18,27 @@
 .display-none{
   display: none;
 }
+
+.label-style{
+  color: var(--content-primary);
+  font: var(--text-lb-sm);
+}
+
+.icon-wrapper{
+  border: 1px solid var(--border-primary);
+  border-radius: 8px;
+  padding: 12px;
+}
+
+.input-style{
+  color: var(--content-secondary);
+  font: var(--text-md);
+
+  border: none;
+  background-color: transparent;
+
+
+  &::placeholder{
+    color: var(--content-secondary);
+  }
+}
