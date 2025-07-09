@@ -14,3 +14,7 @@
   cursor: pointer;
   background: url("../assets/arrow-down.svg") no-repeat;
 }
+
+.display-none{
+  display: none;
+}
