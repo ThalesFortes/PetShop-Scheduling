@@ -169,7 +169,7 @@
         </header>
         <form action="#" method="post" id="petshop-form" enctype="multipart/form-data">
           <div class="input-wrapper">
-            <label for="name-tutor">Nome do tutor</label>
+            <label for="name-tutor" class="label-style">Nome do tutor</label>
             <div class="icon-wrapper">
               <i><img src="./src/assets/user.svg" alt="icone de usuario"></i>
               <input 
@@ -184,13 +184,14 @@
           </div>
 
           <div class="input-wrapper">
-            <label for="name-pet">Nome do pet</label>
-            <div>
+            <label for="name-pet" class="label-style">Nome do pet</label>
+            <div class="icon-wrapper">
               <i><img src="./src/assets/pet-icon.svg" alt="icone de pet"></i>
               <input 
                 type="text"
                 name="name-pet"
                 id="name-pet" 
+                class="input-style"
                 placeholder="Cheddar"
                 aria-label="Nome do pet"
                 required>
@@ -198,13 +199,14 @@
           </div>
 
           <div class="input-wrapper">
-            <label for="phone">Telefone</label>
-            <div>
+            <label for="phone" class="label-style">Telefone</label>
+            <div class="icon-wrapper">
               <i><img src="./src/assets/phone.svg" alt="icone de telefone"></i>
               <input 
                 type="tel" 
                 name="phone" 
                 id="phone" 
+                class="input-style"
                 placeholder="(00)00000-0000"
                 aria-label="Telefone do Tutor"
                 required>
@@ -212,39 +214,42 @@
           </div>
 
           <div class="input-wrapper">
-            <label for="description-service">Descrição do serviço</label>
-            <div>
+            <label for="description-service" class="label-style">Descrição do serviço</label>
+            <div class="icon-wrapper"> 
               <textarea 
                 name="description-service" 
                 id="description-service"
+                class="input-style"
                 placeholder="Banho e tosa"
                 aria-label="Descrição do serviço">
               </textarea>
             </div>
           </div>
 
-          <fieldset id="date-informations">
+          <fieldset id="date-informations" class="border-none">
             <div class="input-wrapper">
-              <label for="date-service">Data</label>
-              <div>
+              <label for="date-service" class="label-style">Data</label>
+              <div class="icon-wrapper">
                 <i><img src="./src/assets/calendar.svg" alt="calendario icone"></i>
                 <input 
                   type="date" 
                   name="date-service"
                   id="date-service"
+                  class="input-style"
                   aria-label="Data da consulta"
                   required>
               </div>
             </div>
 
             <div class="input-wrapper">
-              <label for="hour-service">Hora</label>
-              <div>
+              <label for="hour-service" class="label-style">Hora</label>
+              <div class="icon-wrapper">
                 <i><img src="./src/assets/clock.svg" alt="relogio icone"></i>
                 <input 
                   type="time" 
                   name="hour-service"
                   id="hour-service"
+                  class="input-style"
                   aria-label="Hora da consulta"
                   required>
               </div>
