@@ -2,26 +2,6 @@ footer{
   background-color:var(--background-tertiary) ;
   padding-block: 18px;
   text-align: center;
-
-  & > #new-scheduling{
-    color: #050505;
-    font-weight: 700;
-    text-transform: uppercase;
-    font-family: var(--ff-title);
-
-    padding: 12px 14px;
-    border: none;
-    border-radius: 5px;
-    background-color: var( --content-brand , #9282FA) ;
-    box-shadow: 0px 0px 40px 0px rgba(146, 130, 250, 0.30);
-
-    &:hover{
-      background-color: var(--background-highlights);
-      cursor: pointer;
-      transform: scale(1.1);
-      transition: 200ms ease-in-out transform;
-    }
-  }
 }
 
 @media only screen and (min-width:1024px) {

@@ -52,3 +52,10 @@ body, input{
   color: var(--content-primary);
   font: var(--text-md);
 }
+
+
+::-webkit-calendar-picker-indicator {
+  cursor: pointer;
+  background: url("../assets/arrow-down.svg") no-repeat;
+}
+

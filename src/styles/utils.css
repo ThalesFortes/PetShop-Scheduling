@@ -10,15 +10,29 @@
   white-space: nowrap;
 }
 
-::-webkit-calendar-picker-indicator {
-  cursor: pointer;
-  background: url("../assets/arrow-down.svg") no-repeat;
-}
-
 .display-none{
   display: none;
 }
 
+.button-style{
+    color: #050505;
+    font-weight: 700;
+    text-transform: uppercase;
+    font-family: var(--ff-title);
+
+    padding: 12px 14px;
+    border: none;
+    border-radius: 5px;
+    background-color: var( --content-brand , #9282FA) ;
+    box-shadow: 0px 0px 40px 0px rgba(146, 130, 250, 0.30);
+
+    &:hover{
+      background-color: var(--background-highlights);
+      cursor: pointer;
+      transform: scale(1.1);
+      transition: 200ms ease-in-out transform;
+  }
+}
 
 .border-none{
   border: none;
@@ -33,6 +47,10 @@
   border: 1px solid var(--border-primary);
   border-radius: 8px;
   padding: 12px;
+  margin-top: 10px;
+  
+  display: flex;
+  align-items: center;
 }
 
 .input-style{
@@ -41,9 +59,11 @@
 
   border: none;
   background-color: transparent;
-
+  outline: none;
 
   &::placeholder{
     color: var(--content-secondary);
   }
+
 }
+
