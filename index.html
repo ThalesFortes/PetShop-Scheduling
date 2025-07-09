@@ -22,6 +22,7 @@
     </header>
 
     <main>
+      <!--
       <section id="form-header">
         <header>
           <h1>Sua agenda</h1>
@@ -155,6 +156,103 @@
             </li>
           </ul>
         </div>
+      </section>
+        -->
+
+      <section id="new-pet-scheduling">
+        <div>
+          <img src="./src/assets/close.svg" alt="fechar">
+        </div>
+        <header>
+          <h2>Agende um atendimento</h2>
+          <p>Preencha os dados do cliente para realizar o agendamento:</p>
+        </header>
+        <form action="#" method="post" id="petshop-form" enctype="multipart/form-data">
+          <div class="input-wrapper">
+            <label for="name-tutor">Nome do tutor</label>
+            <div>
+              <i><img src="./src/assets/user.svg" alt="icone de usuario"></i>
+              <input 
+                type="text" 
+                name="name-tutor" 
+                id="name-tutor" 
+                placeholder="Helena Souza"
+                aria-label="Nome do tutor"
+                required >
+            </div>
+          </div>
+
+          <div class="input-wrapper">
+            <label for="name-pet">Nome do pet</label>
+            <div>
+              <i><img src="./src/assets/pet-icon.svg" alt="icone de pet"></i>
+              <input 
+                type="text"
+                name="name-pet"
+                id="name-pet" 
+                placeholder="Cheddar"
+                aria-label="Nome do pet"
+                required>
+            </div>
+          </div>
+
+          <div class="input-wrapper">
+            <label for="phone">Telefone</label>
+            <div>
+              <i><img src="./src/assets/phone.svg" alt="icone de telefone"></i>
+              <input 
+                type="tel" 
+                name="phone" 
+                id="phone" 
+                placeholder="(00)00000-0000"
+                aria-label="Telefone do Tutor"
+                required>
+            </div>
+          </div>
+
+          <div class="input-wrapper">
+            <label for="description-service">Descrição do serviço</label>
+            <div>
+              <textarea 
+                name="description-service" 
+                id="description-service"
+                placeholder="Banho e tosa"
+                aria-label="Descrição do serviço">
+              </textarea>
+            </div>
+          </div>
+
+          <fieldset id="date-informations">
+            <div class="input-wrapper">
+              <label for="date-service">Data</label>
+              <div>
+                <i><img src="./src/assets/calendar.svg" alt="calendario icone"></i>
+                <input 
+                  type="date" 
+                  name="date-service"
+                  id="date-service"
+                  aria-label="Data da consulta"
+                  required>
+              </div>
+            </div>
+
+            <div class="input-wrapper">
+              <label for="hour-service">Hora</label>
+              <div>
+                <i><img src="./src/assets/clock.svg" alt="relogio icone"></i>
+                <input 
+                  type="time" 
+                  name="hour-service"
+                  id="hour-service"
+                  aria-label="Hora da consulta"
+                  required>
+              </div>
+            </div>
+          </fieldset>
+          <button type="submit">
+            Agendar
+          </button>
+        </form>
       </section>
     
     </main>   
