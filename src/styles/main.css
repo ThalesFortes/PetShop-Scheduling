@@ -1,7 +1,8 @@
 main {
   max-width: 890px;
-  margin: auto;
-  padding-inline: 1.3rem;
+  padding-top: 10px;
+  padding-bottom: 80px;
+  padding-inline: 16px;
   position: relative;
 }
 
@@ -58,5 +59,6 @@ main {
     flex-direction: row;
     gap: 3rem;
     width: auto;
+    padding-bottom: 0;
   }
 }

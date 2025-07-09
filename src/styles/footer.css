@@ -1,13 +1,26 @@
-footer{
+#new-scheduling{
   background-color:var(--background-tertiary) ;
-  padding-block: 18px;
+  padding-block: 1rem;
   text-align: center;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 1rem;
+  
 }
 
+
 @media only screen and (min-width:1024px) {
-  footer{
-  background-color:transparent;
-  padding-block: 0;
-  margin-top: 0;
+  #new-scheduling{
+    background-color:transparent;
+    padding-block: 0;
+    margin-top: 0;
+    position: absolute;
+    left: 48%;
+    bottom: 10%;
+    z-index: 1;
+    
+    font-size: 20px;
   }
 }
