@@ -8,8 +8,6 @@ footer{
   footer{
   background-color:transparent;
   padding-block: 0;
-  position: absolute;
-  bottom: -7%;
-  left: 70%;
+  margin-top: 0;
   }
 }
