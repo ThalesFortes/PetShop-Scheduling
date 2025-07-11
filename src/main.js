@@ -10,6 +10,3 @@ import "./styles/main.css"
 import "./styles/scheduling.css"
 import "./styles/form.css"
 import "./styles/footer.css"
-
-import dayjs from "dayjs"
-console.log(dayjs().format("HH:mm"))
