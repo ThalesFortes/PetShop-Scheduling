@@ -11,29 +11,45 @@ const descriptionService = document.getElementById("description-service")
 const dateService = document.getElementById("date-service")
 const hourService = document.getElementById("hour-service")
 
-form.onsubmit = async (event) =>{
+
+form.onsubmit = async (event) => {
   event.preventDefault()
 
   try {
-    const id = Math.random()
+    const id =  `${Date.now()}-${Math.floor(Math.random() * 1000)}`
     verifyInputs(id)
 
-    const tutor = tutorName.value.trim
+    const tutor = tutorName.value.trim()
+    const pet = petName.value.trim()
+    const phone = phoneInput.value.trim()
+    const description = descriptionService.value.trim()
+
+    const nameRegex = /^[A-Za-zÀ-ÿ\s]+$/
+    if (!nameRegex.test(tutor)) throw new Error("Nome do tutor inválido")
+    if (!nameRegex.test(pet)) throw new Error("Nome do pet inválido")
+
     verifyInputs(tutor)
-
-    const pet = petName.value.trim
     verifyInputs(pet)
-
-    const phone = phoneInput.value.trim
     verifyInputs(phone)
-
-    const description = descriptionService.value.trim
     verifyInputs(description)
 
-    const hour = hourService.value
-    const dates = dateService.value
-    const date = dates + hour
+    const dateOnly = dateService.value
+    const timeOnly = hourService.value
+    const dateTime = dayjs(`${dateOnly}T${timeOnly}`)
+    const date = dateTime.toISOString()
+
     verifyInputs(date)
+
+    console.log("Data formatada:", date.format())
+
+    return {
+      id,
+      tutor,
+      pet,
+      phone,
+      description,
+      date
+    }
 
   } catch (error) {
     console.log(error)
