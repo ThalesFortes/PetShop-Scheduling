@@ -1,9 +1,17 @@
 import { fetchByDay } from "../../service/fetch-by-day.js"
+import { hoursLoad } from "../form/load-hours.js"
+import { viewAppointementsList } from "./view.js"
 
-const date = document.getElementById("date")
+const selectedDate = document.getElementById("date")
 
 export async function appointmentsLoad () {
 
+  const date = selectedDate.value
+  console.log(date)
+
   const dailyAppointments = await fetchByDay({ date })
-  
+
+  viewAppointementsList({ dailyAppointments })
+
+  hoursLoad({ date , dailyAppointments})
 }

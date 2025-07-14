@@ -6,9 +6,7 @@ const afternoonList = document.getElementById("afternoon-list")
 const nightList = document.getElementById("night-list")
 
 export function viewAppointementsList ({ dailyAppointments }) {
-  morningList.innerHTML = ""
-  afternoonList.innerHTML = ""
-  nightList.innerHTML = ""
+
 
   try {
     dailyAppointments.forEach((appointments) => {
@@ -43,7 +41,7 @@ export function viewAppointementsList ({ dailyAppointments }) {
 
       if (hourAppointments <= 12){
         morningList.appendChild(li)
-      } else if (hourAppointments >= 13) {
+      } else if (hourAppointments >= 13  && hourAppointments < 18) {
         afternoonList.appendChild(li)
       } else {
         nightList.appendChild(li)

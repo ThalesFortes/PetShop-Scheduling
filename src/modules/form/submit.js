@@ -3,6 +3,9 @@ import { newAppointment } from "../../service/new-appointment.js"
 import { verifyInputs } from "../../utils/verify-inputs.js";
 import { appointmentsLoad } from "../appointments/load.js";
 
+
+const dates = document.getElementById("date")
+
 const form = document.querySelector("form")
 
 const tutorName = document.getElementById("name-tutor")
@@ -11,6 +14,15 @@ const phoneInput = document.getElementById("phone")
 const descriptionService = document.getElementById("description-service")
 const dateService = document.getElementById("date-service")
 const hourService = document.getElementById("hour-service")
+
+
+
+
+const dateToday = dayjs(new Date()).format("YYYY-MM-DD")
+const hourToday = dayjs(new Date()).format("HH:mm")
+dates.value = dateToday
+dates.min = dateToday
+dateService.min = dateToday
 
 
 form.onsubmit = async (event) => {
@@ -41,7 +53,7 @@ form.onsubmit = async (event) => {
 
     verifyInputs(date)
 
-    console.log("Data formatada:", date.format())
+    console.log("Data formatada:", date)
 
     await newAppointment({
       id,

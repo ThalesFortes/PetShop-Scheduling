@@ -8,9 +8,9 @@ export async function fetchByDay({ date }) {
 
     const data = await response.json()
 
-    const dailyAppointments = data.filter((appointments) => {
-      dayjs(date).isSame(appointments.date, "day")
-    })
+    
+    const dailyAppointments = data.filter((item) => dayjs(item.date).format("YYYY-MM-DD") === date)
+    
 
     return dailyAppointments
 

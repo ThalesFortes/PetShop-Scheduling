@@ -11,6 +11,7 @@ import "./styles/scheduling.css"
 import "./styles/form.css"
 import "./styles/footer.css"
 
+import "./modules/form/change-date.js"
 import "./modules/form/input-format.js"
 import "./modules/form/submit.js"
 import "./modules/page-load.js"

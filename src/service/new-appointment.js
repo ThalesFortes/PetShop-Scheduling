@@ -2,7 +2,7 @@ import { apiConfig } from "./api-config.js"
 
 export async function newAppointment({ id, tutor, pet, description, phone, date }) {
   try {
-    await fetch (`${apiConfig}/schedules`, {
+    await fetch (`${apiConfig.baseURL}/schedules`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json"
