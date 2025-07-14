@@ -57,15 +57,3 @@ export function viewAppointementsList ({ dailyAppointments }) {
   }
 
 }
-
- /* 
-  <li class="description-scheduling">
-    <div>
-      <strong class="hour">09:00</strong>
-      <strong>Animal Nome</strong>
-      <span>/ Médico nome</span>
-    </div> 
-      <p>Descrição</p>
-    <button>Remover agendamento</button>
-  </li>
-*/ 

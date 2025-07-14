@@ -1,6 +1,7 @@
 import dayjs from "dayjs";
 import { newAppointment } from "../../service/new-appointment.js"
 import { verifyInputs } from "../../utils/verify-inputs.js";
+import { appointmentsLoad } from "../appointments/load.js";
 
 const form = document.querySelector("form")
 
@@ -42,14 +43,16 @@ form.onsubmit = async (event) => {
 
     console.log("Data formatada:", date.format())
 
-    return {
+    await newAppointment({
       id,
       tutor,
       pet,
       phone,
       description,
       date
-    }
+    })
+
+    await appointmentsLoad()
 
   } catch (error) {
     console.log(error)
