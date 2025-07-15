@@ -10,6 +10,7 @@ export async function appointmentsLoad () {
   console.log(date)
 
   const dailyAppointments = await fetchByDay({ date })
+  
 
   viewAppointementsList({ dailyAppointments })
 

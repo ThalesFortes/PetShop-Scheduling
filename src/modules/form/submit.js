@@ -2,7 +2,9 @@ import dayjs from "dayjs";
 import { newAppointment } from "../../service/new-appointment.js"
 import { verifyInputs } from "../../utils/verify-inputs.js";
 import { appointmentsLoad } from "../appointments/load.js";
-
+import { verifyHasNumber , formatPhoneMask } from "./input-format.js";
+import { hoursLoad } from "./load-hours.js";
+import { fetchByDay } from "../../service/fetch-by-day.js";
 
 const dates = document.getElementById("date")
 
@@ -16,12 +18,15 @@ const dateService = document.getElementById("date-service")
 const hourService = document.getElementById("hour-service")
 
 
-
-
 const dateToday = dayjs(new Date()).format("YYYY-MM-DD")
 dates.value = dateToday
 dates.min = dateToday
 dateService.min = dateToday
+
+
+formatPhoneMask(phoneInput)
+
+
 
 form.onsubmit = async (event) => {
   event.preventDefault()
@@ -35,12 +40,10 @@ form.onsubmit = async (event) => {
     const phone = phoneInput.value.trim()
     const description = descriptionService.value.trim()
 
-    const nameRegex = /^[A-Za-zÀ-ÿ\s]+$/
-    if (!nameRegex.test(tutor)) throw new Error("Nome do tutor inválido")
-    if (!nameRegex.test(pet)) throw new Error("Nome do pet inválido")
-
     verifyInputs(tutor)
+    verifyHasNumber(tutor)
     verifyInputs(pet)
+    verifyHasNumber(pet)
     verifyInputs(phone)
     verifyInputs(description)
 
@@ -55,9 +58,16 @@ form.onsubmit = async (event) => {
       throw new Error("Horário inválido: não é possível agendar para um horário anterior ao atual.")
     }
 
+    const dailyAppointments = await fetchByDay({ date: dateOnly})
+    const hoursAvailable = await hoursLoad({ date: dateOnly, dailyAppointments})
+    const hourInfo = hoursAvailable.find((h => h.hour === timeOnly))
+ 
+    if (!hourInfo || !hourInfo.available){
+      alert("Este horário já está ocupado ou indisponível. Escolha outro horário.")
+      return
+    }
+    
     verifyInputs(date)
-
-    console.log("Data formatada:", date)
 
     await newAppointment({
       id,

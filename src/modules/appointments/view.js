@@ -6,12 +6,14 @@ const afternoonList = document.getElementById("afternoon-list")
 const nightList = document.getElementById("night-list")
 
 export function viewAppointementsList ({ dailyAppointments }) {
-
-
   try {
+    morningList.innerHTML = " "
+    afternoonList.innerHTML = " "
+    nightList.innerHTML = " "
+    
     dailyAppointments.forEach((appointments) => {
 
-      const hourAppointments = dayjs(appointments.date).hour()
+      const hourAppointments = dayjs(appointments.date).format("HH:mm")
 
       const li = document.createElement("li")
       li.classList.add("description-scheduling")
@@ -24,7 +26,7 @@ export function viewAppointementsList ({ dailyAppointments }) {
       hours.textContent = hourAppointments
 
       const strong = document.createElement("strong")
-      strong.textContent = appointments.pet
+      strong.textContent =`${appointments.pet} / `
 
       const span = document.createElement("span")
       span.textContent = appointments.tutor
