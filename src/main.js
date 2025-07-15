@@ -10,6 +10,7 @@ import "./styles/main.css"
 import "./styles/scheduling.css"
 import "./styles/form.css"
 import "./styles/footer.css"
+import "./styles/animations.css"
 
 import "./modules/form/change-date.js"
 import "./modules/form/input-format.js"

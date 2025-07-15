@@ -1,0 +1,67 @@
+#overlay-blur {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(5px);
+  z-index: 0;
+  padding: 2rem;
+}
+
+
+
+.appear{
+  animation: modalFadeIn 700ms ease forwards ;
+}
+
+.blur-show{
+  animation: blurShowIn 700ms ease forwards;
+}
+
+
+
+.desappear{
+  animation: modalFadeOut 700ms ease forwards ;
+}
+  
+.blur-hide{
+  animation: blurShowOut 700ms ease forwards;
+}
+  
+  
+
+@keyframes modalFadeIn {
+  from {
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(0.1);
+  }
+  to {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+  }
+}
+
+
+@keyframes modalFadeOut {
+  from {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+  }
+  to {
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(0.1);
+  }
+}
+
+/* Animação para o fundo */
+@keyframes blurShowIn {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+@keyframes blurShowOut {
+  from { opacity: 1; }
+  to   { opacity: 0; }
+}

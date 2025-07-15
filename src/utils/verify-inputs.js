@@ -1,5 +1,5 @@
-export function verifyInputs (input) {
-  if(!input){
-     return alert("Por favor insira o:" , input)
+export function verifyInputs(value) {
+  if (!value || value.trim().length === 0) {
+    throw new Error("Preencha todos os campos corretamente.");
   }
 }

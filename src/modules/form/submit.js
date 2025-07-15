@@ -5,7 +5,7 @@ import { appointmentsLoad } from "../appointments/load.js";
 import { verifyHasNumber , formatPhoneMask } from "./input-format.js";
 import { hoursLoad } from "./load-hours.js";
 import { fetchByDay } from "../../service/fetch-by-day.js";
-import { closeModal } from "../../utils/close-modal.js";
+import { closeModalAnimated } from "../../utils/close-modal.js";
 
 const dates = document.getElementById("date")
 
@@ -68,8 +68,7 @@ form.onsubmit = async (event) => {
     
     verifyInputs(date)
 
-    modal.classList.add("display-none")
-    blur.classList.add("display-none")
+    closeModalAnimated({modal,blur})
 
     await newAppointment({
       id,

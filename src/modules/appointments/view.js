@@ -11,8 +11,8 @@ export function viewAppointementsList ({ dailyAppointments }) {
     nightList.innerHTML = " "
     
     dailyAppointments.forEach((appointments) => {
-
       const hourAppointments = dayjs(appointments.date).format("HH:mm")
+      const hourOnly = parseInt(dayjs(appointments.date).format("HH"))
 
       const li = document.createElement("li")
       li.classList.add("description-scheduling")
@@ -40,9 +40,9 @@ export function viewAppointementsList ({ dailyAppointments }) {
 
       li.append(div, p, button)
 
-      if (hourAppointments <= 12){
+      if (hourOnly <= 12){
         morningList.appendChild(li)
-      } else if (hourAppointments >= 13  && hourAppointments < 18) {
+      } else if (hourOnly >= 13  && hourOnly < 18) {
         afternoonList.appendChild(li)
       } else {
         nightList.appendChild(li)

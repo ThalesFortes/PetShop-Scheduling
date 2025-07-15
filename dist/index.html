@@ -19,7 +19,7 @@
       <img src="./src/assets/logo.png" alt="logo">
     </header>
 
-    <main>
+    <main >
       
       <section id="form-header">
         <header>
@@ -37,7 +37,7 @@
         </div>
       </section>
 
-      <section class="schedules">
+      <section class="schedules ">
         <div class="schedule-list">
           <header id="morning">
             <div>
@@ -46,7 +46,9 @@
             </div>
             <span>09h-12h</span>
           </header>
+         
           <ul id="morning-list" class="list" role="list">
+             <!-- 
             <li class="description-scheduling">
               <div>
                 <strong class="hour">09:00</strong>
@@ -74,6 +76,7 @@
                 <p>Descrição</p>
               <button>Remover agendamento</button>
             </li>
+             -->
           </ul>
         </div>
 
@@ -86,6 +89,7 @@
             <span>13h-18h</span>
           </header>
           <ul id="afternoon-list" class="list" role="list">
+            <!-- 
 
             <li class="description-scheduling">
               <div>
@@ -115,6 +119,7 @@
                 <p>Descrição</p>
               <button>Remover agendamento</button>
             </li>
+             -->
           </ul>
         </div>
 
@@ -122,15 +127,16 @@
           <header id="night">
             <div>
               <img src="./src/assets/moon.svg" alt="período da noite">
-              <span>Manhã</span>
+              <span>Noite</span>
             </div>
             <span>19h-21h</span>
           </header>
           <ul id="night-list" class="list" role="list">
+            <!-- 
             <li class="description-scheduling">
               <div>
                 <strong class="hour">09:00</strong>
-                <strong>Animal Nome</strong>
+                <strong class= "petName">Animal Nome</strong>
                 <span>/ Médico nome</span>
               </div> 
                 <p>Descrição</p>
@@ -154,18 +160,20 @@
                 <p>Descrição</p>
               <button>Remover agendamento</button>
             </li>
+            -->
           </ul>
         </div>
         <div  id="new-scheduling">
-          <button   class="button-style">Novo Agendamento</button>
+          <button class="button-style">Novo Agendamento</button>
         </div>
         
       </section>
     
+      <div id="overlay-blur" class="display-none"></div>
 
       <section id="new-pet-scheduling" class="display-none">
         <div>
-          <img src="./src/assets/close.svg" alt="fechar">
+          <img src="./src/assets/close.svg" alt="fechar" id="imageCloseModal">
         </div>
         <header>
           <h2>Agende um atendimento</h2>
@@ -225,7 +233,8 @@
                 id="description-service"
                 class="input-style"
                 placeholder="Banho e tosa"
-                aria-label="Descrição do serviço">
+                aria-label="Descrição do serviço"
+                required>
               </textarea>
             </div>
           </div>
@@ -255,11 +264,14 @@
                   id="hour-service"
                   class="input-style"
                   aria-label="Hora da consulta"
+                  min="07:00"
+                  max="21:00"
+                  step="3600" 
                   required>
               </div>
             </div>
           </fieldset>
-          <button type="submit" class="button-style">
+          <button type="submit" class="button-style" id="buttonAppointments">
             Agendar
           </button>
         </form>
