@@ -7,7 +7,6 @@ const selectedDate = document.getElementById("date")
 export async function appointmentsLoad () {
 
   const date = selectedDate.value
-  console.log(date)
 
   const dailyAppointments = await fetchByDay({ date })
   

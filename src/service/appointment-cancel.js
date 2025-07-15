@@ -1,6 +1,6 @@
 import { apiConfig } from "./api-config.js";
 
-export async function cancelAppointment() {
+export async function cancelAppointment({ id }) {
   try {
     await fetch (`${apiConfig.baseURL}/schedules/${id}`,{
       method:"DELETE",
