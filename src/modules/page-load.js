@@ -1,6 +1,5 @@
 import { appointmentsLoad } from "../modules/appointments/load.js"
-document.addEventListener("DOMContentLoaded",  function () {
-  console.log("OI")
-  appointmentsLoad()
 
+document.addEventListener("DOMContentLoaded",  function () {
+  appointmentsLoad()
 })

@@ -1,6 +1,5 @@
 import dayjs from "dayjs"
 
-
 const morningList = document.getElementById("morning-list")
 const afternoonList = document.getElementById("afternoon-list")
 const nightList = document.getElementById("night-list")
@@ -55,5 +54,6 @@ export function viewAppointementsList ({ dailyAppointments }) {
     console.log(error)
     alert("Não foi possível gerar a lista")
   }
+
 
 }

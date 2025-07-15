@@ -1,32 +1,27 @@
 import { cancelAppointment } from "../../service/appointment-cancel.js"
 import { appointmentsLoad } from "./load.js"
 
-const list = document.querySelector("description-scheduling")
+export function setupDeleteHandler (listId){
+  const list = document.getElementById(listId)
+  console.log(list)
+  list.addEventListener("click", async (event) => {
+    console.log(event.target)
+    if (event.target.tagName === "BUTTON") {
+      const li = event.target.closest("li")
+      if (!li) return
 
-export async function  removeAppointment() {
+      const { id } = li.dataset
+      if (!id) return
 
-  list.forEach(item => {
-    
-    item.addEventListener("click", async (event) => {
-      if (event.target.tagName === "button")
-      {
-        const li = event.target.closest("li")
-        const {id} = li.dataset
-
-        if(id) {
-          const isConfirm = confirm("Tem certeza que deseja cancelar o agendamento?")
-
-          if (isConfirm) {
-            await cancelAppointment({ id })
-
-            appointmentsLoad()
-          }
-        }
-        
+      const isConfirm = confirm("Tem certeza que deseja cancelar o agendamento?")
+      if (isConfirm) {
+        await cancelAppointment( {id} )
+        appointmentsLoad()
       }
-
-    })
-    
-  });
- 
+    }
+  })
 }
+
+setupDeleteHandler("morning-list")
+setupDeleteHandler("afternoon-list")
+setupDeleteHandler("night-list")
