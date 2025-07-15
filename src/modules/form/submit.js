@@ -19,11 +19,9 @@ const hourService = document.getElementById("hour-service")
 
 
 const dateToday = dayjs(new Date()).format("YYYY-MM-DD")
-const hourToday = dayjs(new Date()).format("HH:mm")
 dates.value = dateToday
 dates.min = dateToday
 dateService.min = dateToday
-
 
 form.onsubmit = async (event) => {
   event.preventDefault()
@@ -51,6 +49,12 @@ form.onsubmit = async (event) => {
     const dateTime = dayjs(`${dateOnly}T${timeOnly}`)
     const date = dateTime.toISOString()
 
+    const now = dayjs()
+    // Se for hoje e horário selecionado for anterior à hora atual
+    if (dateTime.isBefore(now) && dateOnly === dateToday) {
+      throw new Error("Horário inválido: não é possível agendar para um horário anterior ao atual.")
+    }
+
     verifyInputs(date)
 
     console.log("Data formatada:", date)
@@ -68,6 +72,6 @@ form.onsubmit = async (event) => {
 
   } catch (error) {
     console.log(error)
-    alert("Não foi possível criar novo agendamento")
+    alert(error)
   }
 }
