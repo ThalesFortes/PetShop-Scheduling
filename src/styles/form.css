@@ -6,7 +6,8 @@
   height: 100vh;
   background-color: rgba(0, 0, 0, 0.3);
   backdrop-filter: blur(5px);
-  z-index: 9;
+  z-index: 0;
+  padding: 2rem;
 }
 
 #new-pet-scheduling{
@@ -18,7 +19,7 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  z-index: 10;
+  z-index: 1;
   padding: 2rem;
   background-color: #14151d;
   border-radius: 12px;

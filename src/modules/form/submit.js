@@ -5,6 +5,7 @@ import { appointmentsLoad } from "../appointments/load.js";
 import { verifyHasNumber , formatPhoneMask } from "./input-format.js";
 import { hoursLoad } from "./load-hours.js";
 import { fetchByDay } from "../../service/fetch-by-day.js";
+import { closeModal } from "../../utils/close-modal.js";
 
 const dates = document.getElementById("date")
 
@@ -18,19 +19,17 @@ const dateService = document.getElementById("date-service")
 const hourService = document.getElementById("hour-service")
 
 const modal = document.getElementById("new-pet-scheduling")
+const blur = document.getElementById("overlay-blur")
+
 
 const dateToday = dayjs(new Date()).format("YYYY-MM-DD")
 dates.value = dateToday
 dateService.min = dateToday
 
-
 formatPhoneMask(phoneInput)
-
-
 
 form.onsubmit = async (event) => {
   event.preventDefault()
-
   try {
     const id =  `${Date.now()}-${Math.floor(Math.random() * 1000)}`
     verifyInputs(id)
@@ -69,6 +68,9 @@ form.onsubmit = async (event) => {
     
     verifyInputs(date)
 
+    modal.classList.add("display-none")
+    blur.classList.add("display-none")
+
     await newAppointment({
       id,
       tutor,
@@ -79,10 +81,13 @@ form.onsubmit = async (event) => {
     })
 
     await appointmentsLoad()
-    modal.classList.add("display-none")
+   
 
   } catch (error) {
     console.log(error)
     alert(error)
   }
+ 
 }
+
+ 
