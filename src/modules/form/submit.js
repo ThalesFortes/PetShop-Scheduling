@@ -17,10 +17,10 @@ const descriptionService = document.getElementById("description-service")
 const dateService = document.getElementById("date-service")
 const hourService = document.getElementById("hour-service")
 
+const modal = document.getElementById("new-pet-scheduling")
 
 const dateToday = dayjs(new Date()).format("YYYY-MM-DD")
 dates.value = dateToday
-dates.min = dateToday
 dateService.min = dateToday
 
 
@@ -79,6 +79,7 @@ form.onsubmit = async (event) => {
     })
 
     await appointmentsLoad()
+    modal.classList.add("display-none")
 
   } catch (error) {
     console.log(error)

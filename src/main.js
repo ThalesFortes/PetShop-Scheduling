@@ -13,6 +13,7 @@ import "./styles/footer.css"
 
 import "./modules/form/change-date.js"
 import "./modules/form/input-format.js"
+import "./utils/close-modal.js"
 
 import "./modules/form/submit.js"
 import "./modules/page-load.js"
