@@ -15,7 +15,7 @@
 <h2 id="layout">🎨 Layout Desktop</h2>
 
 <p align="center">
-      <img src="./readme_imgs/web0.png" alt="Imagem da pagina demonstrando como ela e" width="400px" height="400px">
+      <img src="./readme_imgs/web0.png" alt="Imagem da pagina demonstrando como ela e" width="600px" height="400px">
       <img src="./readme_imgs/web1.png" alt="Imagem da pagina demonstrando como ela e" width="400px" height="400px">
 </p>
 
@@ -23,7 +23,7 @@
 
 <p align="center">
       <img src="./readme_imgs/mobile.png" alt="Imagem da pagina demonstrando como ela e" width="400px" height="400px">
-      <img src="./readme_imgs/mobile.png" alt="Imagem da pagina demonstrando como ela e" width="400px" height="400px">
+      <img src="./readme_imgs/mobile2.png" alt="Imagem da pagina demonstrando como ela e" width="400px" height="400px">
 </p>
 
 <h2 id="installation">📱 Installation</h2>
