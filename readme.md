@@ -16,7 +16,7 @@
 
 <p align="center">
       <img src="./readme_imgs/web0.png" alt="Imagem da pagina demonstrando como ela e" width="450px" height="400px">
-      <img src="./readme_imgs/web1.png" alt="Imagem da pagina demonstrando como ela e" width="400px" height="400px">
+      <img src="./readme_imgs/web1.png" alt="Imagem da pagina demonstrando como ela e" width="300px" height="400px">
 </p>
 
 <h2 id="layout">🎨 Layout Mobile</h2>
