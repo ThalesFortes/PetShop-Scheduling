@@ -22,8 +22,8 @@
 <h2 id="layout">🎨 Layout Mobile</h2>
 
 <p align="center">
-      <img src="./readme_imgs/mobile.png" alt="Imagem da pagina demonstrando como ela e" width="200px" height="100px">
-      <img src="./readme_imgs/mobile.png" alt="Imagem da pagina demonstrando como ela e" width="318px" height="200px">
+      <img src="./readme_imgs/mobile.png" alt="Imagem da pagina demonstrando como ela e" width="400px" height="400px">
+      <img src="./readme_imgs/mobile.png" alt="Imagem da pagina demonstrando como ela e" width="400px" height="400px">
 </p>
 
 <h2 id="installation">📱 Installation</h2>
