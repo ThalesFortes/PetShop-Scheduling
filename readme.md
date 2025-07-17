@@ -29,7 +29,7 @@
 <h2 id="installation">📱 Installation</h2>
 
 - Clone the project: 
-```bash git clone https://github.com/ThalesFortes/hairday.git ```
+```bash git clone https://github.com/ThalesFortes/PetShop-Scheduling.git ```
 
 - Install Json-server.
 ```bash npm install json-server```
