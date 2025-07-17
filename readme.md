@@ -15,7 +15,7 @@
 <h2 id="layout">🎨 Layout Desktop</h2>
 
 <p align="center">
-      <img src="./readme_imgs/web0.png" alt="Imagem da pagina demonstrando como ela e" width="500px" height="400px">
+      <img src="./readme_imgs/web0.png" alt="Imagem da pagina demonstrando como ela e" width="450px" height="400px">
       <img src="./readme_imgs/web1.png" alt="Imagem da pagina demonstrando como ela e" width="400px" height="400px">
 </p>
 
